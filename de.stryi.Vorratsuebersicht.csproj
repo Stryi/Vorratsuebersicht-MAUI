@@ -59,4 +59,24 @@
     <TransformFile Remove="Resources\mipmap-xhdpi\**" />
     <TransformFile Remove="Resources\mipmap-xxxhdpi\**" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Database\Results\StorageItemQuantityResult.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.82" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Update="Assets\Vorraete_db0.db3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Update="Assets\Vorraete_Demo.db3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Update="Assets\Vorraete_Demo_pl.db3">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </AndroidAsset>
+  </ItemGroup>
 </Project>

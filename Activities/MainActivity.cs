@@ -1,10 +1,10 @@
 using Android.Content;
-using VorratsUebersicht;
 
-//using AndroidX.Core.Content;
 
-namespace de.stryi.maui
+namespace VorratsUebersicht
 {
+    using static Tools;
+
     [Activity(Label = "@Strings/App_Name", Icon = "@mipmap/appicon", MainLauncher = true)]
     public class MainActivity : Activity
     {
@@ -39,6 +39,9 @@ namespace de.stryi.maui
             backgroundPaint?.SetBounds(0, 0, 10, 10);
             this.ActionBar?.SetBackgroundDrawable(backgroundPaint);
             this.ActionBar?.SetDisplayShowHomeEnabled(true);
+
+            // Create databases on startup
+            Android_Database.Instance.RestoreDatabasesFromResourcesOnStartup(this);
 
             // Auswahl nach Kategorien
             Button? buttonKategorie = FindViewById<Button>(Resource.Id.MainButton_Kategorie);
