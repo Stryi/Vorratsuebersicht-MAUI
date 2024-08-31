@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <OutputType>Exe</OutputType>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationId>de.stryi.Vorratsuebersicht</ApplicationId>
+    <ApplicationVersion>1</ApplicationVersion>
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <AssemblyName>VorratsUebersicht</AssemblyName>
+    <RootNamespace>VorratsUebersicht</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <AndroidJavaSource Remove="Resources\mipmap-hdpi\**" />
+    <AndroidJavaSource Remove="Resources\mipmap-mdpi\**" />
+    <AndroidJavaSource Remove="Resources\mipmap-xhdpi\**" />
+    <AndroidJavaSource Remove="Resources\mipmap-xxxhdpi\**" />
+    <AndroidLibrary Remove="Resources\mipmap-hdpi\**" />
+    <AndroidLibrary Remove="Resources\mipmap-mdpi\**" />
+    <AndroidLibrary Remove="Resources\mipmap-xhdpi\**" />
+    <AndroidLibrary Remove="Resources\mipmap-xxxhdpi\**" />
+    <AndroidNativeLibrary Remove="Resources\mipmap-hdpi\**" />
+    <AndroidNativeLibrary Remove="Resources\mipmap-mdpi\**" />
+    <AndroidNativeLibrary Remove="Resources\mipmap-xhdpi\**" />
+    <AndroidNativeLibrary Remove="Resources\mipmap-xxxhdpi\**" />
+    <AndroidResource Remove="Resources\mipmap-hdpi\**" />
+    <AndroidResource Remove="Resources\mipmap-mdpi\**" />
+    <AndroidResource Remove="Resources\mipmap-xhdpi\**" />
+    <AndroidResource Remove="Resources\mipmap-xxxhdpi\**" />
+    <Compile Remove="Resources\mipmap-hdpi\**" />
+    <Compile Remove="Resources\mipmap-mdpi\**" />
+    <Compile Remove="Resources\mipmap-xhdpi\**" />
+    <Compile Remove="Resources\mipmap-xxxhdpi\**" />
+    <EmbeddedResource Remove="Resources\mipmap-hdpi\**" />
+    <EmbeddedResource Remove="Resources\mipmap-mdpi\**" />
+    <EmbeddedResource Remove="Resources\mipmap-xhdpi\**" />
+    <EmbeddedResource Remove="Resources\mipmap-xxxhdpi\**" />
+    <JavaSourceJar Remove="Resources\mipmap-hdpi\**" />
+    <JavaSourceJar Remove="Resources\mipmap-mdpi\**" />
+    <JavaSourceJar Remove="Resources\mipmap-xhdpi\**" />
+    <JavaSourceJar Remove="Resources\mipmap-xxxhdpi\**" />
+    <None Remove="Resources\mipmap-hdpi\**" />
+    <None Remove="Resources\mipmap-mdpi\**" />
+    <None Remove="Resources\mipmap-xhdpi\**" />
+    <None Remove="Resources\mipmap-xxxhdpi\**" />
+    <ProguardConfiguration Remove="Resources\mipmap-hdpi\**" />
+    <ProguardConfiguration Remove="Resources\mipmap-mdpi\**" />
+    <ProguardConfiguration Remove="Resources\mipmap-xhdpi\**" />
+    <ProguardConfiguration Remove="Resources\mipmap-xxxhdpi\**" />
+    <TransformFile Remove="Resources\mipmap-hdpi\**" />
+    <TransformFile Remove="Resources\mipmap-mdpi\**" />
+    <TransformFile Remove="Resources\mipmap-xhdpi\**" />
+    <TransformFile Remove="Resources\mipmap-xxxhdpi\**" />
+  </ItemGroup>
+</Project>
