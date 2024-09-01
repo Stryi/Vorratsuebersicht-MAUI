@@ -60,13 +60,36 @@
     <TransformFile Remove="Resources\mipmap-xxxhdpi\**" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Database\Results\StorageItemQuantityResult.cs" />
+    <AndroidResource Remove="Resources\Menu\ArticleDetails_menu.xml" />
+    <AndroidResource Remove="Resources\Menu\ArticleImage_menu.xml" />
+    <AndroidResource Remove="Resources\Menu\ArticleList_menu.xml" />
+    <AndroidResource Remove="Resources\Menu\InternetDatabaseSearch_menu.xml" />
+    <AndroidResource Remove="Resources\Menu\ShoppingList_menu.xml" />
+    <AndroidResource Remove="Resources\Menu\StorageItemList_menu.xml" />
+    <AndroidResource Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Tools\AltDatePickerFragment.cs" />
+    <Compile Remove="Tools\CsvExport.cs" />
+    <Compile Remove="Tools\DatePickerFragment .cs" />
+    <Compile Remove="Tools\ZXingFragmentActivity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\Menu\ArticleDetails_menu.xml" />
+    <None Remove="Resources\Menu\ArticleImage_menu.xml" />
+    <None Remove="Resources\Menu\ArticleList_menu.xml" />
+    <None Remove="Resources\Menu\InternetDatabaseSearch_menu.xml" />
+    <None Remove="Resources\Menu\Main_menu.xml" />
+    <None Remove="Resources\Menu\ShoppingList_menu.xml" />
+    <None Remove="Resources\Menu\StorageItemList_menu.xml" />
+    <None Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tools\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.82" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Update="Assets\Vorraete_db0.db3">

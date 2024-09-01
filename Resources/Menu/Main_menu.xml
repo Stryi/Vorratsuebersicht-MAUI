@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item android:id="@+id/Main_Menu_SelectDatabase"
+        android:icon="@mipmap/baseline_dns_white_24"
+        android:title="@string/Main_Database"
+        order="Primary"
+        priority="0"
+        />
+
+  <item android:id="@+id/Main_Menu_Options"
+        android:icon="@mipmap/baseline_settings_white_24"
+        android:title="@string/Settings_Title"
+        order="Primary"
+        priority="0"
+        />
+</menu>

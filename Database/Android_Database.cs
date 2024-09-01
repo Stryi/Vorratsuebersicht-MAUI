@@ -10,7 +10,7 @@ using Microsoft.Maui.ApplicationModel;
 
 namespace VorratsUebersicht
 {
-    //using SQLite;
+    using SQLite;
     using static Tools;
 
     public class Android_Database
@@ -128,7 +128,6 @@ namespace VorratsUebersicht
             }
         }
 
-        /*
         public void CompressDatabase()
         {
             SQLite.SQLiteConnection databaseConnection = this.GetConnection();
@@ -144,26 +143,25 @@ namespace VorratsUebersicht
 
             databaseConnection.Execute("VACUUM");
         }
-        */
 
-   //     public string RepairDatabase()
-   //     {
-			//string path = GetDatabasePath();
-   //         if (path == null)
-   //             return "Keine Datenbank angegeben.";
+        public string RepairDatabase()
+        {
+			string path = GetDatabasePath();
+            if (path == null)
+                return "Keine Datenbank angegeben.";
 
-			//// This is where we copy in the prepopulated database
-			//TRACE("Database Path: {0}", path);
+			// This is where we copy in the prepopulated database
+			TRACE("Database Path: {0}", path);
 
-			//var conn = new SQLite.SQLiteConnection(path, false);
+			var conn = new SQLite.SQLiteConnection(path, false);
 
-   //         var checkResult = conn.Query<IntegrityCheck>("PRAGMA integrity_check");
+            var checkResult = conn.Query<IntegrityCheck>("PRAGMA integrity_check");
 
-   //         if (checkResult.Count == 0)
-   //             return "Kein Ergebnis beim PRAGMA integrity_check geliefert.";
+            if (checkResult.Count == 0)
+                return "Kein Ergebnis beim PRAGMA integrity_check geliefert.";
 
-   //         return checkResult[0].integrity_check;
-   //     }
+            return checkResult[0].integrity_check;
+        }
 
         public bool IsCurrentDatabaseExists()
 		{
@@ -225,14 +223,14 @@ namespace VorratsUebersicht
         /// <param name="destination"></param>
         private void PrepareTestDatabase(string destination)
         {
-			//var conn = new SQLite.SQLiteConnection(destination, false);
+			var conn = new SQLite.SQLiteConnection(destination, false);
 
-   //         DateTime bestBefore = new DateTime(2000, 1, 1);
-   //         TimeSpan span =  DateTime.Today - bestBefore;
-   //         int daysAdd = (int)span.TotalDays;
+            DateTime bestBefore = new DateTime(2000, 1, 1);
+            TimeSpan span =  DateTime.Today - bestBefore;
+            int daysAdd = (int)span.TotalDays;
 
-   //         string cmd = string.Format("UPDATE StorageItem SET BestBefore = date(BestBefore, '+{0} day')", daysAdd);
-   //         conn.Execute(cmd);
+            string cmd = string.Format("UPDATE StorageItem SET BestBefore = date(BestBefore, '+{0} day')", daysAdd);
+            conn.Execute(cmd);
         }
 
         /// <summary>
@@ -256,58 +254,57 @@ namespace VorratsUebersicht
             }
         }
 
-        //TODO1 public static SQLite.SQLiteConnection SQLiteConnection = null;
+        public static SQLite.SQLiteConnection SQLiteConnection = null;
 
-        // TODO1
-		//public SQLite.SQLiteConnection GetConnection()
-		//{
-  //          if (Android_Database.SQLiteConnection != null)
-  //              return Android_Database.SQLiteConnection;
+        public SQLite.SQLiteConnection GetConnection()
+        {
+            if (Android_Database.SQLiteConnection != null)
+                return Android_Database.SQLiteConnection;
 
-		//	string path = GetDatabasePath();
-  //          if (path == null)
-  //          {
-  //              TRACE("Keine Database ist ausgewählt.");
-  //              throw new Exception("Keine Database ist ausgewählt.");
-  //          }
+            string path = GetDatabasePath();
+            if (path == null)
+            {
+                TRACE("Keine Database ist ausgewählt.");
+                throw new Exception("Keine Database ist ausgewählt.");
+            }
 
-  //          FileInfo fileInfo = new FileInfo(path);
-  //          if (fileInfo.IsReadOnly)
-  //          {
-  //              TRACE($"Database '{path}' is read only!");
-  //              throw new Exception($"Database '{path}' is read only!");
-  //          }
+            FileInfo fileInfo = new FileInfo(path);
+            if (fileInfo.IsReadOnly)
+            {
+                TRACE($"Database '{path}' is read only!");
+                throw new Exception($"Database '{path}' is read only!");
+            }
 
-		//	// This is where we copy in the prepopulated database
-		//	if (!File.Exists(path))
-  //          {
-  //              TRACE($"Database '{path}' not exists.");
-  //              throw new Exception($"Database '{path}' not exists.");
-  //          }
+            // This is where we copy in the prepopulated database
+            if (!File.Exists(path))
+            {
+                TRACE($"Database '{path}' not exists.");
+                throw new Exception($"Database '{path}' not exists.");
+            }
 
-  //          TRACE("Database Path: {0}", path);
+            TRACE("Database Path: {0}", path);
 
-  //          TRACE("Database Size: {0} ({1:n0} Bytes)", Tools.ToFuzzyByteString(fileInfo.Length), fileInfo.Length);
+            TRACE("Database Size: {0} ({1:n0} Bytes)", Tools.ToFuzzyByteString(fileInfo.Length), fileInfo.Length);
 
-		//	var conn = 1; // TODO1 new SQLite.SQLiteConnection(path, false);
-  //          //conn.Trace = true;
+            var conn = new SQLite.SQLiteConnection(path, false);
+            //conn.Trace = true;
 
-		//	//string cmd = "PRAGMA journal_mode=MEMORY";
-		//	//IList<JournalMode> tableInfo = conn.Query<JournalMode>(cmd);
-  // //         if (tableInfo.Count > 0)
-  // //         {
-  // //             //TRACE("PRAGMA journal_mode={0}", tableInfo[0].journal_mode);
-  // //         }
+			string cmd = "PRAGMA journal_mode=MEMORY";
+			IList<JournalMode> tableInfo = conn.Query<JournalMode>(cmd);
+            if (tableInfo.Count > 0)
+            {
+                //TRACE("PRAGMA journal_mode={0}", tableInfo[0].journal_mode);
+            }
 
-		//	//TODO1 this.UpdateDatabase(conn);
+            this.UpdateDatabase(conn);
 
-  //          Android_Database.SQLiteConnection = conn;
+            Android_Database.SQLiteConnection = conn;
 
-  //          Settings.PutString("LastSelectedDatabase", path);
-        
-		//	// Return the database connection 
-		//	return conn;
-		//}
+            Settings.PutString("LastSelectedDatabase", path);
+
+            // Return the database connection 
+            return conn;
+        }
 
         public static List<string> GetStoragesPaths(Context context, string additionsPath = null)
         {
@@ -433,7 +430,7 @@ namespace VorratsUebersicht
 
                 Android_Database.SelectedDatabaseName = databaseName;
 
-                //TODO1 Android_Database.SQLiteConnection = Android_Database.Instance.GetConnection();
+                Android_Database.SQLiteConnection = Android_Database.Instance.GetConnection();
             }
             catch(Exception ex)
             {
@@ -445,15 +442,13 @@ namespace VorratsUebersicht
 
         public void CloseConnection()
         {
-            // TODO1
-            //if (Android_Database.SQLiteConnection != null)
-            //{
-            //    Android_Database.SQLiteConnection.Close();
-            //    Android_Database.SQLiteConnection = null;
-            //}
+            if (Android_Database.SQLiteConnection != null)
+            {
+                Android_Database.SQLiteConnection.Close();
+                Android_Database.SQLiteConnection = null;
+            }
         }
 
-        /*
 		private void UpdateDatabase(SQLiteConnection conn)
 		{
 			// Update 1.21: Kalorien
@@ -543,16 +538,13 @@ namespace VorratsUebersicht
 			var field = tableInfo.FirstOrDefault(e => e.name.Equals(fieldName, StringComparison.InvariantCultureIgnoreCase));
 			return (field != null);
 		}
-        */
 
-        /*
         private bool IsTableInDatabase(SQLiteConnection conn, string tableName)
         {
             string cmd = string.Format("SELECT name FROM sqlite_master WHERE type = 'table' AND name = '{0}'", tableName);
             IList<table_info> tableInfo = conn.Query<table_info>(cmd);
             return (tableInfo.Count > 0);
         }
-        */
 
         /// <summary>
         /// Erstellt Datenbank aus den Resourcen.
