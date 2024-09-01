@@ -30,7 +30,7 @@ namespace VorratsUebersicht
 
         private static DateTime preLaunchTestEndDay;
 
-        protected override void OnCreate(Bundle? bundle)
+        protected override void OnCreate(Bundle bundle)
         {
             // Damit Pre-Launch von Google Play Store nicht immer wieder
             // in die EAN Scan "Falle" tappt und da nicht wieder rauskommt.
@@ -84,9 +84,9 @@ namespace VorratsUebersicht
             }
 
             // Klick auf den "abgelaufen" Text bringt die Liste der (bald) abgelaufender Artieln.
-            //FindViewById<TextView>(Resource.Id.Main_Text).Click  += ArticlesNearExpiryDate_Click;
-            //FindViewById<TextView>(Resource.Id.Main_Text1).Click += ArticlesNearExpiryDate_Click;
-            //FindViewById<TextView>(Resource.Id.Main_Text2).Click += ArticlesNearExpiryDate_Click;
+            FindViewById<TextView>(Resource.Id.Main_Text).Click  += ArticlesNearExpiryDate_Click;
+            FindViewById<TextView>(Resource.Id.Main_Text1).Click += ArticlesNearExpiryDate_Click;
+            FindViewById<TextView>(Resource.Id.Main_Text2).Click += ArticlesNearExpiryDate_Click;
 
             // Auswahl nach Kategorien
             Button buttonKategorie = FindViewById<Button>(Resource.Id.MainButton_Kategorie);
@@ -196,10 +196,9 @@ namespace VorratsUebersicht
 
         public override bool OnPrepareOptionsMenu(IMenu menu)
         {
-            /* TODO
             IMenuItem itemSelectDatabase = menu.FindItem(Resource.Id.Main_Menu_SelectDatabase);
             itemSelectDatabase.SetVisible(!Android_Database.UseTestDatabase);
-            */
+
             return true;
         }
 

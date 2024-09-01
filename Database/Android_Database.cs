@@ -87,7 +87,7 @@ namespace VorratsUebersicht
             //
             // /data/user/0/de.stryi.Vorratsuebersicht/files/Vorraete.db3
             //
-            databasePath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal);
+            databasePath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.LocalApplicationData);
             databaseFileName = Path.Combine(databasePath, Android_Database.sqliteFilename_Prod);
             
             if (File.Exists(databaseFileName))
