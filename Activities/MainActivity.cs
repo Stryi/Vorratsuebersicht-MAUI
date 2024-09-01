@@ -13,7 +13,7 @@ namespace VorratsUebersicht
 {
     using static Tools;
 
-    [Activity(Label = "Vü", Icon = "@mipmap/appicon", MainLauncher = true)]
+    [Activity(Label = "Vü", Icon = "@mipmap/appicon")]
     public class MainActivity : Activity
     {
         // Debug-Konstanten

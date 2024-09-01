@@ -19,7 +19,7 @@ namespace VorratsUebersicht
             }
 
             // "/data/user/0/de.stryi.Vorratsuebersicht/files"
-            string logFilePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            string logFilePath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData);
 
             // 1. "/storage/emulated/0/Android/data/de.stryi.Vorratsuebersicht/cache"
             // 2. "/storage/1820-3B0F/Android/data/de.stryi.Vorratsuebersicht/cache"
@@ -69,7 +69,7 @@ namespace VorratsUebersicht
         internal static string[] GetLogFileList()
         {
             // "/data/user/0/de.stryi.Vorratsuebersicht/files"
-            string logFilePath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal);
+            string logFilePath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.LocalApplicationData);
             
             var unsortedFileList = Directory.GetFiles(logFilePath, "Vue_*.log");
 

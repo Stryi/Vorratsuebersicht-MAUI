@@ -67,6 +67,7 @@
     <AndroidResource Remove="Resources\Menu\ShoppingList_menu.xml" />
     <AndroidResource Remove="Resources\Menu\StorageItemList_menu.xml" />
     <AndroidResource Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
+    <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
@@ -83,6 +84,7 @@
     <None Remove="Resources\Menu\ShoppingList_menu.xml" />
     <None Remove="Resources\Menu\StorageItemList_menu.xml" />
     <None Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
+    <None Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tools\" />

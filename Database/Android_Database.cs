@@ -65,7 +65,7 @@ namespace VorratsUebersicht
             //
 			if (Android_Database.UseTestDatabase)
             {
-                databasePath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.Personal);
+                databasePath = System.Environment.GetFolderPath (System.Environment.SpecialFolder.LocalApplicationData);
                 databaseFileName = Path.Combine(databasePath, Android_Database.sqliteFilename_Test);
 
                 return databaseFileName;
@@ -184,7 +184,7 @@ namespace VorratsUebersicht
             }
 
             // Beispiel: "/data/user/0/de.stryi.Vorratsuebersicht/files"
-			string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
+			string documentsPath = Environment.GetFolderPath (Environment.SpecialFolder.LocalApplicationData);
 			string source      = Path.Combine(documentsPath, Android_Database.sqliteFilename_New);
 
             try
