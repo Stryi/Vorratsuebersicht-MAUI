@@ -98,7 +98,7 @@ namespace VorratsUebersicht
 
             // Artikeldaten
             Button buttonArticle = FindViewById<Button>(Resource.Id.MainButton_Artikeldaten);
-            //buttonArticle.Click += delegate { StartActivityForResult (new Intent (this, typeof(ArticleListActivity)), ArticleListId);};
+            buttonArticle.Click += delegate { StartActivityForResult (new Intent (this, typeof(ArticleListActivity)), ArticleListId);};
 
             // Einkaufsliste
             Button buttonShoppingList = FindViewById<Button>(Resource.Id.MainButton_ShoppingList);
@@ -256,7 +256,7 @@ namespace VorratsUebersicht
             var dialog = new AlertDialog.Builder(this);
             dialog.SetMessage(message);
             dialog.SetTitle(Resource.String.App_Name);
-            // TODO: dialog.SetIcon(Resource.Drawable.ic_launcher);
+            dialog.SetIcon(Resource.Mipmap.ic_launcher);
             dialog.SetPositiveButton(this.Resources.GetString(Resource.String.App_Ok), (s1, e1) => { });
             dialog.Create().Show();
         }
@@ -361,7 +361,7 @@ namespace VorratsUebersicht
             }
 
             AlertDialog.Builder message = new AlertDialog.Builder(this);
-            // TODO message.SetIcon(Resource.Drawable.ic_launcher);
+            message.SetIcon(Resource.Mipmap.ic_launcher);
             message.SetMessage(messageText);
             message.SetPositiveButton(this.Resources.GetString(Resource.String.App_Yes), (s, e) => 
                 { 
@@ -410,7 +410,7 @@ namespace VorratsUebersicht
             var messageDialog = new AlertDialog.Builder(this);
             messageDialog.SetMessage(message);
             messageDialog.SetTitle(Resource.String.App_Name);
-            // TODO messageDialog.SetIcon(Resource.Drawable.ic_launcher);
+            messageDialog.SetIcon(Resource.Mipmap.ic_launcher);
             messageDialog.SetPositiveButton(Resource.String.App_Ok, (s, e) => {});
             messageDialog.Create().Show();
         }
@@ -424,7 +424,7 @@ namespace VorratsUebersicht
                 var message = new AlertDialog.Builder(this);
                 message.SetMessage(Resource.String.Start_TestDbQuestion);
                 message.SetTitle(Resource.String.App_Name);
-                // TODO message.SetIcon(Resource.Drawable.ic_launcher);
+                message.SetIcon(Resource.Mipmap.ic_launcher);
                 message.SetPositiveButton("Test starten", (s, e) => 
                     { 
                         Android_Database.UseTestDatabase = true;
@@ -780,11 +780,9 @@ private void ShowDatabaseInfoText()
                         break;
                     case 1:
                         // Artikel Liste
-                        /* TODO
                         var articleDetails = new Intent(this, typeof(ArticleListActivity));
                         articleDetails.PutExtra("EANCode", eanCode);
                         this.StartActivityForResult(articleDetails, ContinueScanMode);
-                        */
                         break;
                 }
                 return;

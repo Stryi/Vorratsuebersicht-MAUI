@@ -255,7 +255,7 @@ namespace VorratsUebersicht
                     var dialog = new AlertDialog.Builder(this);
                     dialog.SetMessage(message);
                     dialog.SetTitle(Resource.String.App_Name);
-                    // TODO: dialog.SetIcon(Resource.Drawable.ic_launcher);
+                    dialog.SetIcon(Resource.Mipmap.ic_launcher);
                     dialog.SetPositiveButton(this.Resources.GetString(Resource.String.App_Ok), (s, e) => 
                     { 
                         StartActivity(typeof(MainActivity));

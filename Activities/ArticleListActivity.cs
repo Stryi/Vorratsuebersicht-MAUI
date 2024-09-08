@@ -4,14 +4,13 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 using static Android.Widget.AdapterView;
 
 namespace VorratsUebersicht
 {
-    [Activity(Label = "@string/Main_Button_ArtikelListe", Icon = "@drawable/ic_local_offer_white_48dp")]
+    [Activity(Label = "@string/Main_Button_ArtikelListe", Icon = "@mipmap/ic_local_offer_white_48dp")]
     public class ArticleListActivity : Activity, SearchView.IOnQueryTextListener
     {
         List<ArticleListView> liste = new List<ArticleListView>();
@@ -48,7 +47,7 @@ namespace VorratsUebersicht
             SetContentView(Resource.Layout.ArticleList);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 10, 10);
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -127,11 +126,11 @@ namespace VorratsUebersicht
             switch(item.ItemId)
             {
                 case 1: // Lagerbestand
-                    var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
-                    storageDetails.PutExtra("ArticleId", selectedItem.ArticleId);
+                    //var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
+                    //storageDetails.PutExtra("ArticleId", selectedItem.ArticleId);
 
-                    this.SaveListState();
-                    this.StartActivityForResult(storageDetails, 20);
+                    //this.SaveListState();
+                    //this.StartActivityForResult(storageDetails, 20);
 
                     return true;
 
@@ -360,6 +359,7 @@ namespace VorratsUebersicht
 
         private void ShowArticleDetails(int articleId, string name)
         {
+            /*
             var articleDetails = new Intent (this, typeof(ArticleDetailsActivity));
             articleDetails.PutExtra("Name", name);
             articleDetails.PutExtra("ArticleId", articleId);
@@ -371,6 +371,7 @@ namespace VorratsUebersicht
             StartActivityForResult(articleDetails, 10);
 
             this.SaveListState();
+            */
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
