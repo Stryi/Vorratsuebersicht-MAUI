@@ -102,7 +102,7 @@ namespace VorratsUebersicht
 
             // Einkaufsliste
             Button buttonShoppingList = FindViewById<Button>(Resource.Id.MainButton_ShoppingList);
-            //buttonShoppingList.Click += delegate { StartActivityForResult (new Intent (this, typeof(ShoppingListActivity)), ShoppingListId);};
+            buttonShoppingList.Click += delegate { StartActivityForResult (new Intent (this, typeof(ShoppingListActivity)), ShoppingListId);};
 
             // Barcode scannen
             Button buttonBarcode = FindViewById<Button>(Resource.Id.MainButton_Barcode);

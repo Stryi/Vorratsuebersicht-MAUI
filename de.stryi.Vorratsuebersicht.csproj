@@ -90,8 +90,6 @@
     <AndroidResource Remove="Resources\layout\BackupFileManage.axml" />
     <AndroidResource Remove="Resources\layout\InternetDatabaseSearch.axml" />
     <AndroidResource Remove="Resources\layout\Main.axml" />
-    <AndroidResource Remove="Resources\layout\ShoppingItemList.axml" />
-    <AndroidResource Remove="Resources\layout\ShoppingItemListView.axml" />
     <AndroidResource Remove="Resources\layout\SpinnerItem.axml" />
     <AndroidResource Remove="Resources\layout\StorageItemList.axml" />
     <AndroidResource Remove="Resources\layout\StorageItemListView.axml" />
@@ -103,12 +101,16 @@
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Activities\ArticleDetailsActivity.cs" />
+    <Compile Remove="Activities\ArticleImageActivity.cs" />
+    <Compile Remove="Activities\BackupFileManageActivity.cs" />
+    <Compile Remove="Activities\InternetDatabaseSearchActivity.cs" />
+    <Compile Remove="Activities\StorageItemListActivity.cs" />
+    <Compile Remove="Activities\StorageItemQuantityActivity.cs" />
+    <Compile Remove="Activities\SubCategoryActivity.cs" />
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
     <Compile Remove="Tools\DatePickerFragment .cs" />
     <Compile Remove="Tools\ZXingFragmentActivity.cs" />
-    <Compile Remove="Views\ListItemViewBase.cs" />
-    <Compile Remove="Views\ShoppingListView.cs" />
-    <Compile Remove="Views\ShoppingListViewAdapter.cs" />
     <Compile Remove="Views\SimpleListItem2Adapter.cs" />
     <Compile Remove="Views\SimpleListItem2View.cs" />
     <Compile Remove="Views\StorageItemListView.cs" />

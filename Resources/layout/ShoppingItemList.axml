@@ -41,7 +41,7 @@
         android:layout_height="60dp"
         android:layout_above="@id/ShoppingItemList_Footer"        
         android:layout_alignParentRight="true"
-        android:src="@drawable/baseline_add_outline_black_36"
+        android:src="@mipmap/baseline_add_outline_black_36"
         android:background="@drawable/roundcorner"
         android:contentDescription="@string/ShoppingList_Menu_Add"
         android:layout_margin="20dp"/>

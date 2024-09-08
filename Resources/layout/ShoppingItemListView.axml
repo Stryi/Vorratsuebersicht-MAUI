@@ -12,7 +12,7 @@
         android:paddingTop="3dp"
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
-        android:src="@drawable/ic_photo_camera_black_24dp"
+        android:src="@mipmap/ic_photo_camera_black_24dp"
         android:layout_alignParentLeft="true" />
     <LinearLayout
         android:id="@+id/ShoppingItemListView_Text"

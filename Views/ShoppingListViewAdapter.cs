@@ -76,7 +76,7 @@ namespace VorratsUebersicht
 
             if (item.Image == null)
             {
-                image.SetImageResource(Resource.Drawable.ic_photo_camera_black_24dp);
+                image.SetImageResource(Resource.Mipmap.ic_photo_camera_black_24dp);
                 image.Alpha = 0.5f;
             }
             else
@@ -110,9 +110,11 @@ namespace VorratsUebersicht
 
             int articleId = (int)imageToView.Tag;
 
+            /*
             var articleImage = new Intent(context, typeof(ArticleImageActivity));
             articleImage.PutExtra("ArticleId", articleId);
             context.StartActivity(articleImage);
+            */
         }
 
         private void OnBoughtClick(object sender, EventArgs e)
