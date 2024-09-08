@@ -13,7 +13,7 @@ namespace VorratsUebersicht
 {
     using static Tools;
 
-    [Activity(Label = "Vü", Icon = "@mipmap/appicon")]
+    [Activity(Label = "@string/App_Name")]
     public class MainActivity : Activity
     {
         // Debug-Konstanten
@@ -206,7 +206,6 @@ namespace VorratsUebersicht
         {
             switch (item.ItemId)
             {
-                /* TODO
                 case Resource.Id.Main_Menu_Options:
                     // TODO StartActivityForResult(new Intent(this, typeof(SettingsActivity)), OptionsId);
 
@@ -217,7 +216,6 @@ namespace VorratsUebersicht
                     this.SwitchDatabase();
 
                     return true;
-                */
             }
 
             return false;

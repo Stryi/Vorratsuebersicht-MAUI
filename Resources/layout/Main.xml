@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="5dp">
+    android:paddingLeft="5dp"
+    android:background="@drawable/Background">
   <LinearLayout
     android:id="@+id/Main_LinearLayout"
     android:orientation="vertical"
@@ -13,18 +14,17 @@
     android:scrollbars="vertical"
     android:paddingLeft="5dp"
     android:paddingTop="5dp">
-
     <TextView
-    android:id="@+id/Main_Text"
-    android:tag="ExpiryDateOnly"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingLeft="5dp"
-    android:textSize="20sp"
-    android:textColor="@color/Text_Color"
-    android:text="@string/Main_DemnaechstZuVerbrauchen"
-    android:tooltipText="@android:string/no"
-    android:visibility="gone" />
+      android:id="@+id/Main_Text"
+      android:tag="ExpiryDateOnly"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingLeft="5dp"
+      android:textSize="20sp"
+      android:textColor="@color/Text_Color"
+      android:text="@string/Main_DemnaechstZuVerbrauchen"
+      android:tooltipText="@android:string/no"
+      android:visibility="gone" />
     <TextView
       android:id="@+id/Main_Text1"
       android:tag="WithExpiryDateOnly"
@@ -53,7 +53,6 @@
       android:textColor="#FFFFFF"
       android:paddingLeft="5dp"
       android:visibility="gone" />
-
     <Button
         android:id="@+id/MainButton_Kategorie"
         android:text="@string/Main_Button_BestandNachKategorie"
@@ -61,10 +60,10 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:textSize="18sp"
+        android:drawableLeft="@mipmap/main_button_storage_grouped"
         android:gravity="left|center_vertical"
-        android:enabled="true"
+        android:enabled="false"
         android:drawablePadding="20dp" />
-
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -76,8 +75,9 @@
           android:layout_height="wrap_content"
           android:textAllCaps="false"
           android:textSize="18sp"
+          android:drawableLeft="@mipmap/main_button_storage"
           android:gravity="left|center_vertical"
-          android:enabled="true"
+          android:enabled="false"
           android:drawablePadding="20dp" />
         <TextView
             android:id="@+id/Main_Text1Counter"
@@ -118,8 +118,9 @@
       android:layout_height="wrap_content"
       android:textAllCaps="false"
       android:textSize="18sp"
+      android:drawableLeft="@mipmap/main_button_article"
       android:gravity="left|center_vertical"
-      android:enabled="true"
+      android:enabled="false"
       android:drawablePadding="20dp" />
     <Button
       android:id="@+id/MainButton_Barcode"
@@ -128,8 +129,9 @@
       android:layout_height="wrap_content"
       android:textAllCaps="false"
       android:textSize="18sp"
+      android:drawableLeft="@drawable/Barcode"
       android:gravity="left|center_vertical"
-      android:enabled="true"
+      android:enabled="false"
       android:drawablePadding="20dp" />
 
     <RelativeLayout
@@ -143,6 +145,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:textSize="18sp"
+        android:drawableLeft="@mipmap/main_button_shopping_cart"        
         android:gravity="left|center_vertical"
         android:enabled="true"
         android:drawablePadding="20dp" />
@@ -169,25 +172,24 @@
   <LinearLayout
     android:id="@+id/Main_Footer"
     android:orientation="vertical"
-    android:layout_alignParentBottom="true"
+    android:layout_alignParentBottom="true"        
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:scrollbars="vertical"
     android:paddingLeft="5dp"
     android:paddingTop="5dp">
-    <TextView
-        android:text="@string/Settings_AppWiki"
-        android:textSize="16sp"
-        android:textColor="@color/Text_Color"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/Main_AppWiki_Link"
-        android:text="@string/Settings_AppWiki_Page"
-        android:textSize="16sp"
-        android:autoLink="web"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/Settings_AppWiki"
+            android:textSize="16sp"
+            android:textColor="@color/Text_Color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/Main_AppWiki_Link"
+            android:text="@string/Settings_AppWiki_Page"
+            android:textSize="16sp"
+            android:autoLink="web"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
   </LinearLayout>
-
 </RelativeLayout>

@@ -5,7 +5,7 @@
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationId>de.stryi.Vorratsuebersicht</ApplicationId>
+    <ApplicationId>de.stryi.Vorratsuebersicht-MAUI</ApplicationId>
     <ApplicationVersion>1</ApplicationVersion>
     <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
     <AssemblyName>VorratsUebersicht</AssemblyName>
@@ -60,6 +60,31 @@
     <TransformFile Remove="Resources\mipmap-xxxhdpi\**" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Remove="Resources\drawable\baseline_add_box_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_close_18.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_close_20.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_close_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_close_36.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_compress_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_delete_forever_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_dns_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_drive_file_rename_outline_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_file_download_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_flashlight_on_20.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_flashlight_on_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_home_repair_service_20.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_home_repair_service_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_image_not_supported_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_share_24.xml" />
+    <AndroidResource Remove="Resources\drawable\baseline_upload_file_24.xml" />
+    <AndroidResource Remove="Resources\drawable\outline_folder_open_24.xml" />
+    <AndroidResource Remove="Resources\drawable\outline_plagiarism_20.xml" />
+    <AndroidResource Remove="Resources\drawable\outline_plagiarism_24.xml" />
+    <AndroidResource Remove="Resources\drawable\RoundCorner.xml" />
+    <AndroidResource Remove="Resources\drawable\splash.png" />
+    <AndroidResource Remove="Resources\drawable\TextView_Counter.xml" />
+    <AndroidResource Remove="Resources\drawable\web_hi_res_512.png" />
+    <AndroidResource Remove="Resources\drawable\web_hi_res_512_old.png" />
     <AndroidResource Remove="Resources\Menu\ArticleDetails_menu.xml" />
     <AndroidResource Remove="Resources\Menu\ArticleImage_menu.xml" />
     <AndroidResource Remove="Resources\Menu\ArticleList_menu.xml" />
@@ -70,12 +95,38 @@
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Remove="Activities\ArticleListActivity.cs" />
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
     <Compile Remove="Tools\CsvExport.cs" />
     <Compile Remove="Tools\DatePickerFragment .cs" />
     <Compile Remove="Tools\ZXingFragmentActivity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Resources\drawable\baseline_add_box_24.xml" />
+    <None Remove="Resources\drawable\baseline_close_18.xml" />
+    <None Remove="Resources\drawable\baseline_close_20.xml" />
+    <None Remove="Resources\drawable\baseline_close_24.xml" />
+    <None Remove="Resources\drawable\baseline_close_36.xml" />
+    <None Remove="Resources\drawable\baseline_compress_24.xml" />
+    <None Remove="Resources\drawable\baseline_delete_forever_24.xml" />
+    <None Remove="Resources\drawable\baseline_dns_24.xml" />
+    <None Remove="Resources\drawable\baseline_drive_file_rename_outline_24.xml" />
+    <None Remove="Resources\drawable\baseline_file_download_24.xml" />
+    <None Remove="Resources\drawable\baseline_flashlight_on_20.xml" />
+    <None Remove="Resources\drawable\baseline_flashlight_on_24.xml" />
+    <None Remove="Resources\drawable\baseline_home_repair_service_20.xml" />
+    <None Remove="Resources\drawable\baseline_home_repair_service_24.xml" />
+    <None Remove="Resources\drawable\baseline_image_not_supported_24.xml" />
+    <None Remove="Resources\drawable\baseline_share_24.xml" />
+    <None Remove="Resources\drawable\baseline_upload_file_24.xml" />
+    <None Remove="Resources\drawable\outline_folder_open_24.xml" />
+    <None Remove="Resources\drawable\outline_plagiarism_20.xml" />
+    <None Remove="Resources\drawable\outline_plagiarism_24.xml" />
+    <None Remove="Resources\drawable\RoundCorner.xml" />
+    <None Remove="Resources\drawable\splash.png" />
+    <None Remove="Resources\drawable\TextView_Counter.xml" />
+    <None Remove="Resources\drawable\web_hi_res_512.png" />
+    <None Remove="Resources\drawable\web_hi_res_512_old.png" />
     <None Remove="Resources\Menu\ArticleDetails_menu.xml" />
     <None Remove="Resources\Menu\ArticleImage_menu.xml" />
     <None Remove="Resources\Menu\ArticleList_menu.xml" />
