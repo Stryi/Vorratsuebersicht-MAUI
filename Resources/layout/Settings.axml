@@ -86,7 +86,7 @@
         <Button
             android:id="@+id/SettingsButton_Backup"
             android:text="@string/Settings_CreateBackup"
-            android:drawableLeft="@drawable/baseline_file_download_white_24"
+            android:drawableLeft="@mipmap/baseline_file_download_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,7 +97,7 @@
         <Button
             android:id="@+id/SettingsButton_BackupToFile"
             android:text="@string/Settings_ShareBackupFile"
-            android:drawableLeft="@drawable/baseline_share_white_24"
+            android:drawableLeft="@mipmap/baseline_share_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
         <Button
             android:id="@+id/SettingsButton_Restore"
             android:text="@string/Settings_RestoreBackup"
-            android:drawableLeft="@drawable/outline_folder_open_white_24"
+            android:drawableLeft="@mipmap/outline_folder_open_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -121,7 +121,7 @@
         <Button
             android:id="@+id/SettingsButton_RestoreFromFile"
             android:text="@string/Settings_RestoreBackupFromFile"
-            android:drawableLeft="@drawable/outline_plagiarism_white_24"
+            android:drawableLeft="@mipmap/outline_plagiarism_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
         <Button
             android:id="@+id/SettingsButton_Compress"
             android:text="@string/Settings_DatenbankKomprimieren"
-            android:drawableLeft="@drawable/baseline_compress_white_24"
+            android:drawableLeft="@mipmap/baseline_compress_white_24"
             android:contentDescription="@string/Settings_DatenbankKomprimieren"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
@@ -228,7 +228,7 @@
         <Button
             android:id="@+id/SettingsButton_Repair"
             android:text="@string/Settings_DatenbankReparieren"
-            android:drawableLeft="@drawable/baseline_home_repair_service_white_24"
+            android:drawableLeft="@mipmap/baseline_home_repair_service_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
         <Button
             android:id="@+id/SettingsButton_DatabaseNew"
             android:text="@string/Settings_DatabaseNew"
-            android:drawableLeft="@drawable/baseline_add_box_white_24"
+            android:drawableLeft="@mipmap/baseline_add_box_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -252,7 +252,7 @@
         <Button
             android:id="@+id/SettingsButton_DatabaseRename"
             android:text="@string/Settings_DatabaseRename"
-            android:drawableLeft="@drawable/baseline_drive_file_rename_outline_white_24"
+            android:drawableLeft="@mipmap/baseline_drive_file_rename_outline_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -263,7 +263,7 @@
         <Button
             android:id="@+id/SettingsButton_DatabaseDelete"
             android:text="@string/Settings_DatabaseDelete"
-            android:drawableLeft="@drawable/baseline_delete_forever_white_24"
+            android:drawableLeft="@mipmap/baseline_delete_forever_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -274,7 +274,7 @@
         <Button
             android:id="@+id/SettingsButton_DatabaseImport"
             android:text="@string/Settings_DatabaseImport"
-            android:drawableLeft="@drawable/baseline_upload_file_white_24"
+            android:drawableLeft="@mipmap/baseline_upload_file_white_24"
             android:backgroundTint="#CCCCCC"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

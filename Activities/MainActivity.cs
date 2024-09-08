@@ -207,7 +207,7 @@ namespace VorratsUebersicht
             switch (item.ItemId)
             {
                 case Resource.Id.Main_Menu_Options:
-                    // TODO StartActivityForResult(new Intent(this, typeof(SettingsActivity)), OptionsId);
+                    StartActivityForResult(new Intent(this, typeof(SettingsActivity)), OptionsId);
 
                     return true;
 
@@ -365,11 +365,9 @@ namespace VorratsUebersicht
             message.SetMessage(messageText);
             message.SetPositiveButton(this.Resources.GetString(Resource.String.App_Yes), (s, e) => 
                 { 
-                    /* TODO
                     var settingsActivity = new Intent(this, typeof(SettingsActivity));
                     settingsActivity.PutExtra("CreateBackup", true);
                     StartActivity(settingsActivity);
-                    */
                 });
             message.SetNegativeButton(this.Resources.GetString(Resource.String.App_Leter),    (s, e) => { });
             message.SetNeutralButton(this.Resources.GetString(Resource.String.App_NotToday),  (s, e) => 

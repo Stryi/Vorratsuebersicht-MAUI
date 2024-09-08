@@ -89,9 +89,7 @@
     <AndroidResource Remove="Resources\layout\ArticleImage.axml" />
     <AndroidResource Remove="Resources\layout\BackupFileManage.axml" />
     <AndroidResource Remove="Resources\layout\InternetDatabaseSearch.axml" />
-    <AndroidResource Remove="Resources\layout\Licenses.axml" />
     <AndroidResource Remove="Resources\layout\Main.axml" />
-    <AndroidResource Remove="Resources\layout\Settings.axml" />
     <AndroidResource Remove="Resources\layout\ShoppingItemList.axml" />
     <AndroidResource Remove="Resources\layout\ShoppingItemListView.axml" />
     <AndroidResource Remove="Resources\layout\SpinnerItem.axml" />
@@ -106,7 +104,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
-    <Compile Remove="Tools\CsvExport.cs" />
     <Compile Remove="Tools\DatePickerFragment .cs" />
     <Compile Remove="Tools\ZXingFragmentActivity.cs" />
     <Compile Remove="Views\ListItemViewBase.cs" />
@@ -176,9 +173,6 @@
     <None Remove="Resources\Menu\StorageItemList_menu.xml" />
     <None Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
     <None Remove="Resources\values\Styles.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tools\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.82" />
