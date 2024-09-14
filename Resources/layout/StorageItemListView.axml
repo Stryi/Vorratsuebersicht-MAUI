@@ -78,7 +78,7 @@
         android:alpha="0.5"
         android:paddingRight="5.0dp" 
         android:focusable="false"
-        android:src="@drawable/baseline_shopping_cart_black_24"
+        android:src="@mipmap/baseline_shopping_cart_black_24"
         android:focusableInTouchMode="false"    
     />
     <TextView

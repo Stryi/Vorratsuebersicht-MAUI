@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="5dp"
-    android:background="@drawable/Background">
+    android:background="@mipmap/Background">
   <LinearLayout
     android:id="@+id/Main_LinearLayout"
     android:orientation="vertical"
@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:textAllCaps="false"
         android:textSize="18sp"
-        android:drawableLeft="@drawable/main_button_storage_grouped"
+        android:drawableLeft="@mipmap/main_button_storage_grouped"
         android:gravity="left|center_vertical"
         android:enabled="false"
         android:drawablePadding="20dp" />
@@ -75,7 +75,7 @@
           android:layout_height="wrap_content"
           android:textAllCaps="false"
           android:textSize="18sp"
-          android:drawableLeft="@drawable/main_button_storage"
+          android:drawableLeft="@mipmap/main_button_storage"
           android:gravity="left|center_vertical"
           android:enabled="false"
           android:drawablePadding="20dp" />
@@ -92,7 +92,7 @@
             android:textSize="18sp"
             android:textColor="@color/Text_Error"
             android:elevation="40dp"
-            android:background="@drawable/TextView_Counter"
+            android:background="@mipmap/TextView_Counter"
             android:layout_alignParentTop="true"
             android:layout_toLeftOf="@id/Main_Text2Counter" />
         <TextView
@@ -108,7 +108,7 @@
             android:textSize="18sp"
             android:textColor="@color/Text_Warning"
             android:elevation="50dp"
-            android:background="@drawable/TextView_Counter"
+            android:background="@mipmap/TextView_Counter"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true" />
     </RelativeLayout>
@@ -120,7 +120,7 @@
       android:layout_height="wrap_content"
       android:textAllCaps="false"
       android:textSize="18sp"
-      android:drawableLeft="@drawable/main_button_article"
+      android:drawableLeft="@mipmap/main_button_article"
       android:gravity="left|center_vertical"
       android:enabled="false"
       android:drawablePadding="20dp" />
@@ -131,7 +131,7 @@
       android:layout_height="wrap_content"
       android:textAllCaps="false"
       android:textSize="18sp"
-      android:drawableLeft="@drawable/Barcode"
+      android:drawableLeft="@mipmap/Barcode"
       android:gravity="left|center_vertical"
       android:enabled="false"
       android:drawablePadding="20dp" />
@@ -147,7 +147,7 @@
           android:layout_height="wrap_content"
           android:textAllCaps="false"
           android:textSize="18sp"
-          android:drawableLeft="@drawable/main_button_shopping_cart"
+          android:drawableLeft="@mipmap/main_button_shopping_cart"
           android:gravity="left|center_vertical"
           android:enabled="false"
           android:drawablePadding="20dp" />
@@ -165,7 +165,7 @@
             android:textSize="18sp"
             android:textColor="@color/Text_Color"
             android:elevation="50dp"
-            android:background="@drawable/TextView_Counter"
+            android:background="@mipmap/TextView_Counter"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true" />
         </RelativeLayout>

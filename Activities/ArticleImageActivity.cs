@@ -7,7 +7,6 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 using Android.Graphics;
-using Android.Support.V4.Content;
 using Android.Views;
 using MatrixGuide;
 
@@ -35,7 +34,7 @@ namespace VorratsUebersicht
             SetContentView(Resource.Layout.ArticleImage);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 10, 10);
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -51,7 +50,7 @@ namespace VorratsUebersicht
 
             ActionBar.Title = text;
             ActionBar.SetHomeButtonEnabled(true);
-            ActionBar.SetIcon(Resource.Drawable.ic_photo_camera_white_24dp);
+            ActionBar.SetIcon(Resource.Mipmap.ic_photo_camera_white_24dp);
 
             if (ArticleDetailsActivity.imageLarge != null)
                 this.ShowPictureFromBitmap();
@@ -148,7 +147,7 @@ namespace VorratsUebersicht
         {
             if (this.articleId == 0)
             {
-                this.imageView.SetImageResource(Resource.Drawable.ic_photo_camera_white_24dp);
+                this.imageView.SetImageResource(Resource.Mipmap.ic_photo_camera_white_24dp);
                 this.imageView.Alpha = 1f;
                 return;
             }
@@ -156,7 +155,7 @@ namespace VorratsUebersicht
             ArticleImage article = Database.GetArticleImage(this.articleId);
             if (article == null)
             {
-                this.imageView.SetImageResource(Resource.Drawable.ic_photo_camera_black_24dp);
+                this.imageView.SetImageResource(Resource.Mipmap.ic_photo_camera_black_24dp);
                 this.imageView.Alpha = 0.5f;
 
                 return;
@@ -164,7 +163,7 @@ namespace VorratsUebersicht
 
             if (article.ImageLarge == null)
             {
-                this.imageView.SetImageResource(Resource.Drawable.ic_photo_camera_black_24dp);
+                this.imageView.SetImageResource(Resource.Mipmap.ic_photo_camera_black_24dp);
                 this.imageView.Alpha = 0.5f;
 
                 return;
@@ -200,7 +199,7 @@ namespace VorratsUebersicht
                 TRACE(e);
 
                 message = e.Message;
-                this.imageView.SetImageResource(Resource.Drawable.baseline_error_outline_black_24);
+                this.imageView.SetImageResource(Resource.Mipmap.baseline_error_outline_black_24);
                 this.imageView.Alpha = 1f;
             }               
 
@@ -256,7 +255,7 @@ namespace VorratsUebersicht
                     TRACE(ex);
 
                     this.rotatedBitmap = null;
-                    this.imageView.SetImageResource(Resource.Drawable.baseline_error_outline_black_24);
+                    this.imageView.SetImageResource(Resource.Mipmap.baseline_error_outline_black_24);
                     this.imageView.Alpha = 1f;
                     this.imageInfo.Text = ex.Message;
                     return;
@@ -286,7 +285,7 @@ namespace VorratsUebersicht
                 TRACE(ex);
 
                 this.rotatedBitmap = null;
-                this.imageView.SetImageResource(Resource.Drawable.baseline_error_outline_black_24);
+                this.imageView.SetImageResource(Resource.Mipmap.baseline_error_outline_black_24);
                 this.imageView.Alpha = 1f;
                 this.imageInfo.Text = ex.Message;
             }

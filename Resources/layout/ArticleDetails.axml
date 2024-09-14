@@ -22,13 +22,13 @@
                 android:contentDescription="@string/Picture"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
-                android:src="@drawable/ic_photo_camera_white_24dp" />
+                android:src="@mipmap/ic_photo_camera_white_24dp" />
             <ImageView
                 android:id="@+id/ArticleDetails_Image2"
                 android:contentDescription="@string/Picture"
                 android:layout_width="72dp"
                 android:layout_height="72dp"
-                android:src="@drawable/ic_photo_white_24dp" />
+                android:src="@mipmap/ic_photo_white_24dp" />
             <TextView
                 android:id="@+id/ArticleDetails_ImageText"
                 android:layout_width="fill_parent"

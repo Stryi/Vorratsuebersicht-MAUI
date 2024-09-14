@@ -39,7 +39,7 @@
         android:layout_toLeftOf="@+id/StorageItemQuantityList_Remove"
         android:visibility="visible"
         android:focusable="false"
-        android:src="@drawable/baseline_add_circle_outline_black_36" 
+        android:src="@mipmap/baseline_add_circle_outline_black_36" 
         android:background="?android:selectableItemBackground" />
 
     <ImageButton
@@ -49,7 +49,7 @@
         android:layout_alignParentRight="true"        
         android:visibility="visible"
         android:focusable="false"
-        android:src="@drawable/baseline_remove_circle_outline_black_36"
+        android:src="@mipmap/baseline_remove_circle_outline_black_36"
         android:layout_marginLeft="8sp"
         android:background="?android:selectableItemBackground" />
 </RelativeLayout>

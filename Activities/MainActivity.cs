@@ -150,13 +150,11 @@ namespace VorratsUebersicht
             {
                 this.ShowInfoAufTestdatenbank();
             }
-
-            /*
+            
             if (System.Diagnostics.Debugger.IsAttached)
             {
                 Android_Database.UseTestDatabase = true;
             }
-            */
 
             // Datenbankverbindung initialisieren
             this.InitializeDatabase();

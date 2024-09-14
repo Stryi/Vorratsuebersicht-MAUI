@@ -110,11 +110,9 @@ namespace VorratsUebersicht
 
             int articleId = (int)imageToView.Tag;
 
-            /*
             var articleImage = new Intent(context, typeof(ArticleImageActivity));
             articleImage.PutExtra("ArticleId", articleId);
             context.StartActivity(articleImage);
-            */
         }
 
         private void OnBoughtClick(object sender, EventArgs e)

@@ -85,12 +85,9 @@
     <AndroidResource Remove="Resources\drawable\web_hi_res_512.png" />
     <AndroidResource Remove="Resources\drawable\web_hi_res_512_old.png" />
     <AndroidResource Remove="Resources\layout\AltDatePickerFragment.axml" />
-    <AndroidResource Remove="Resources\layout\ArticleDetails.axml" />
-    <AndroidResource Remove="Resources\layout\ArticleImage.axml" />
     <AndroidResource Remove="Resources\layout\BackupFileManage.axml" />
     <AndroidResource Remove="Resources\layout\InternetDatabaseSearch.axml" />
     <AndroidResource Remove="Resources\layout\Main.axml" />
-    <AndroidResource Remove="Resources\layout\SpinnerItem.axml" />
     <AndroidResource Remove="Resources\layout\StorageItemList.axml" />
     <AndroidResource Remove="Resources\layout\StorageItemListView.axml" />
     <AndroidResource Remove="Resources\layout\StorageItemQuantity.axml" />
@@ -101,8 +98,6 @@
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Activities\ArticleDetailsActivity.cs" />
-    <Compile Remove="Activities\ArticleImageActivity.cs" />
     <Compile Remove="Activities\BackupFileManageActivity.cs" />
     <Compile Remove="Activities\InternetDatabaseSearchActivity.cs" />
     <Compile Remove="Activities\StorageItemListActivity.cs" />

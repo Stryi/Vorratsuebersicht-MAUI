@@ -16,17 +16,16 @@ using Android.Content.Res;
 
 using MatrixGuide;
 using static Android.Widget.AdapterView;
-using Android.Support.V4.Content;
-using Android.Support.V7.App;
 using Android.Speech;
-
-using Xamarin.Essentials;
+using Microsoft.Maui.Storage;
+using Microsoft.Maui.Media;
+using Microsoft.Maui.ApplicationModel;
 
 namespace VorratsUebersicht
 {
     using static Tools;
 
-    [Activity(Label = "@string/Main_Button_Artikelangaben", Icon = "@drawable/ic_local_offer_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "@string/Main_Button_Artikelangaben", Icon = "@mipmap/ic_local_offer_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]
     public class ArticleDetailsActivity : Activity
     {
         CultureInfo currentCulture;
@@ -97,7 +96,7 @@ namespace VorratsUebersicht
             this.SetContentView(Resource.Layout.ArticleDetails);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 10, 10);
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -498,8 +497,8 @@ namespace VorratsUebersicht
                         this.articleImage.ImageLarge = null;    // Änderungen verwerfen
                         this.articleImage.ImageSmall = null;    // Gespeichertes Bild auch löschen
 
-                        this.imageView.SetImageResource(Resource.Drawable.ic_photo_camera_white_24dp);
-                        this.imageView2.SetImageResource(Resource.Drawable.ic_photo_white_24dp);
+                        this.imageView.SetImageResource(Resource.Mipmap.ic_photo_camera_white_24dp);
+                        this.imageView2.SetImageResource(Resource.Mipmap.ic_photo_white_24dp);
                         this.imageView2.Visibility = ViewStates.Visible;
 
                         this.ShowStoreQuantityInfo();
@@ -510,7 +509,7 @@ namespace VorratsUebersicht
 
                 case Resource.Id.ArticleDetailsMenu_ScanEAN:
                     //this.SearchEANCode("4444444");
-                    StartActivityForResult(typeof(ZXingFragmentActivity), EANScanID);
+                    //StartActivityForResult(typeof(ZXingFragmentActivity), EANScanID);
 
                     return true;
 
@@ -546,16 +545,18 @@ namespace VorratsUebersicht
             // API aufrufen, ohne auf die Kosten zu verweisen.
             if (!ArticleDetailsActivity.showCostMessage)
             {
+                /*
                 var internetDB = new Intent(this, typeof(InternetDatabaseSearchActivity));
                 internetDB.PutExtra("EANCode", EANCode);
                 this.StartActivityForResult(internetDB, InternetDB);
+                */
                 return;
             }
 
             var message = new Android.App.AlertDialog.Builder(this);
             message.SetTitle(this.Resources.GetString(Resource.String.ArticleDetails_SearchEANScan));
             message.SetMessage(this.Resources.GetString(Resource.String.ArticleDetails_SearchOnOpenFoodFacts));
-            message.SetIcon(Resource.Drawable.ic_launcher);
+            message.SetIcon(Resource.Mipmap.ic_launcher);
 
             Switch checkBox = new Switch(this)
             {
@@ -566,9 +567,11 @@ namespace VorratsUebersicht
             message.SetView(checkBox);
             message.SetPositiveButton(this.Resources.GetString(Resource.String.App_Yes), (s, e) => 
             {
+                /*
                 var internetDB = new Intent(this, typeof(InternetDatabaseSearchActivity));
                 internetDB.PutExtra("EANCode", EANCode);
                 this.StartActivityForResult(internetDB, InternetDB);
+                */
 
                 if (checkBox.Checked)
                 {
@@ -591,7 +594,7 @@ namespace VorratsUebersicht
 
             var message = new Android.App.AlertDialog.Builder(this);
             message.SetMessage(this.Resources.GetString(Resource.String.ArticleDetails_SaveToAddToShippingList));
-            message.SetIcon(Resource.Drawable.ic_launcher);
+            message.SetIcon(Resource.Mipmap.ic_launcher);
             message.SetPositiveButton(this.Resources.GetString(Resource.String.App_Ok), (s, e) => 
                 {
                     this.SaveArticle();
@@ -619,7 +622,7 @@ namespace VorratsUebersicht
 
             var message = new Android.App.AlertDialog.Builder(this);
             message.SetMessage(this.Resources.GetString(Resource.String.ArticleDetails_SaveToAddToStorage));
-            message.SetIcon(Resource.Drawable.ic_launcher);
+            message.SetIcon(Resource.Mipmap.ic_launcher);
             message.SetPositiveButton(this.Resources.GetString(Resource.String.App_Ok), (s, e) => 
                 {
                     this.SaveArticle();
@@ -637,11 +640,12 @@ namespace VorratsUebersicht
         {
             if (this.noStorageQuantity)
                 return;
-
+            /*
             var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
             storageDetails.PutExtra("ArticleId", articleId);
             storageDetails.PutExtra("NoArticleDetails", true);
             this.StartActivityForResult(storageDetails, StorageQuantityId);
+            */
         }
 
         private void SearchEANCode(string eanCode)
@@ -658,7 +662,7 @@ namespace VorratsUebersicht
             }
 
             var message = new Android.App.AlertDialog.Builder(this);
-            message.SetIcon(Resource.Drawable.ic_launcher);
+            message.SetIcon(Resource.Mipmap.ic_launcher);
 
             if (editTextEanCode.Text.Contains(eanCode))
             {
@@ -735,11 +739,12 @@ namespace VorratsUebersicht
                     this.caloriePerUnit.Text = kcalPer100.ToString();
                     this.BerechneCalGes(this, null);
                 }
-
+                /*
                 if (InternetDatabaseSearchActivity.picture != null)
                 {
                     this.ResizeBitmap(InternetDatabaseSearchActivity.picture);
                 }
+                */
             }
 
             if (requestCode == StorageQuantityId)
@@ -766,7 +771,7 @@ namespace VorratsUebersicht
             this.article = null;
             ArticleDetailsActivity.imageLarge = null;
             ArticleDetailsActivity.imageSmall = null;
-            InternetDatabaseSearchActivity.picture = null;
+            //InternetDatabaseSearchActivity.picture = null;
         }
 
         private async void SelectAPicture()
@@ -1116,12 +1121,12 @@ namespace VorratsUebersicht
 
                     this.imageTextView.Text = ex.Message;
 
-                    this.imageView.SetImageResource(Resource.Drawable.baseline_error_outline_black_24);
+                    this.imageView.SetImageResource(Resource.Mipmap.baseline_error_outline_black_24);
                     this.imageView.Enabled = false;
                 }
             }
             else
-                this.imageView.SetImageResource(Resource.Drawable.ic_photo_camera_white_24dp);
+                this.imageView.SetImageResource(Resource.Mipmap.ic_photo_camera_white_24dp);
 
             if (!string.IsNullOrEmpty(eanCode))
             {
