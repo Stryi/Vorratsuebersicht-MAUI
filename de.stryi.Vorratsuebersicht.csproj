@@ -84,33 +84,17 @@
     <AndroidResource Remove="Resources\drawable\TextView_Counter.xml" />
     <AndroidResource Remove="Resources\drawable\web_hi_res_512.png" />
     <AndroidResource Remove="Resources\drawable\web_hi_res_512_old.png" />
-    <AndroidResource Remove="Resources\layout\AltDatePickerFragment.axml" />
-    <AndroidResource Remove="Resources\layout\BackupFileManage.axml" />
-    <AndroidResource Remove="Resources\layout\InternetDatabaseSearch.axml" />
     <AndroidResource Remove="Resources\layout\Main.axml" />
-    <AndroidResource Remove="Resources\layout\StorageItemList.axml" />
-    <AndroidResource Remove="Resources\layout\StorageItemListView.axml" />
-    <AndroidResource Remove="Resources\layout\StorageItemQuantity.axml" />
-    <AndroidResource Remove="Resources\layout\StorageItemQuantityListView.axml" />
-    <AndroidResource Remove="Resources\layout\SubCategoryActivity.axml" />
-    <AndroidResource Remove="Resources\layout\ZxingFragmentActivity.axml" />
     <AndroidResource Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Activities\BackupFileManageActivity.cs" />
     <Compile Remove="Activities\InternetDatabaseSearchActivity.cs" />
-    <Compile Remove="Activities\StorageItemListActivity.cs" />
     <Compile Remove="Activities\StorageItemQuantityActivity.cs" />
-    <Compile Remove="Activities\SubCategoryActivity.cs" />
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
     <Compile Remove="Tools\DatePickerFragment .cs" />
     <Compile Remove="Tools\ZXingFragmentActivity.cs" />
-    <Compile Remove="Views\SimpleListItem2Adapter.cs" />
-    <Compile Remove="Views\SimpleListItem2View.cs" />
-    <Compile Remove="Views\StorageItemListView.cs" />
-    <Compile Remove="Views\StorageItemListViewAdapter.cs" />
-    <Compile Remove="Views\StorageItemQuantityListView.cs" />
     <Compile Remove="Views\StorageItemQuantityListViewAdapter.cs" />
   </ItemGroup>
   <ItemGroup>

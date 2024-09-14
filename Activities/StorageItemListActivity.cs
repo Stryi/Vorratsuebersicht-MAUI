@@ -8,12 +8,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Support.V4.Content;
 using static Android.Widget.AdapterView;
 
 namespace VorratsUebersicht
 {
-    [Activity(Label = "@string/Main_Button_Lagerbestand", Icon = "@drawable/ic_assignment_white_48dp")]
+    [Activity(Label = "@string/Main_Button_Lagerbestand", Icon = "@mipmap/ic_assignment_white_48dp")]
     public class StorageItemListActivity : Activity, SearchView.IOnQueryTextListener
     {
         internal static bool oderByToConsumeDate;
@@ -43,7 +42,7 @@ namespace VorratsUebersicht
             SetContentView(Resource.Layout.StorageItemList);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 10, 10);
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
@@ -205,11 +204,11 @@ namespace VorratsUebersicht
 
             if (StorageItemListActivity.oderByToConsumeDate)
             {
-                sortMenuItem.SetIcon(Resource.Drawable.baseline_sort_DATE_white_24);
+                sortMenuItem.SetIcon(Resource.Mipmap.baseline_sort_DATE_white_24);
             }
             else
             {
-                sortMenuItem.SetIcon(Resource.Drawable.baseline_sort_AZ_white_24);
+                sortMenuItem.SetIcon(Resource.Mipmap.baseline_sort_AZ_white_24);
             }
 
             var searchMenuItem = menu.FindItem(Resource.Id.StorageItemList_Search);
@@ -319,12 +318,14 @@ namespace VorratsUebersicht
 
             StorageItemListView item = Tools.Cast<StorageItemListView>(itemObject);
 
+            /*
             StorageItemQuantityActivity.Reload();   // Artikel neu laden
 
             var storageItemQuantity = new Intent (this, typeof(StorageItemQuantityActivity));
             storageItemQuantity.PutExtra("Heading",   item.Heading);
             storageItemQuantity.PutExtra("ArticleId", item.ArticleId);
             this.StartActivityForResult(storageItemQuantity, StorageItemQuantityId);
+            */
 
             ListView listView = FindViewById<ListView>(Resource.Id.StorageItemView);
             this.listViewState = listView.OnSaveInstanceState();
@@ -385,15 +386,16 @@ namespace VorratsUebersicht
                     return;
 
                 // Anzeige Menge prü Artikel
+                /*
                 var storageItemQuantity = new Intent (this, typeof(StorageItemQuantityActivity));
                 storageItemQuantity.PutExtra("Heading",   heading);
                 storageItemQuantity.PutExtra("ArticleId", id);
                 storageItemQuantity.PutExtra("EditMode",  true);
 
                 this.StartActivityForResult(storageItemQuantity, StorageItemQuantityId);
-
                 ListView listView = FindViewById<ListView>(Resource.Id.StorageItemView);
                 this.listViewState = listView?.OnSaveInstanceState();
+                */
             }
 
         }

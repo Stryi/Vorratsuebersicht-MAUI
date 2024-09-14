@@ -139,7 +139,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:src="@mipmap/baseline_add_outline_black_36"
-        android:background="@mipmap/roundcorner"
+        android:background="@drawable/roundcorner"
         android:contentDescription="@string/StorageItemQuantity_AddPosition"
         android:layout_margin="16dp"/>
 

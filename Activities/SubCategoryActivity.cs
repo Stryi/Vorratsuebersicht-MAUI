@@ -4,14 +4,12 @@ using System.Globalization;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V4.Content;
-using Android.Support.V7.App;
 using Android.Views;
 using Android.Widget;
 
 namespace VorratsUebersicht
 {
-    [Activity(Label = "@string/Main_Button_BestandNachKategorie", Icon = "@drawable/ic_storage_white_48dp")]
+    [Activity(Label = "@string/Main_Button_BestandNachKategorie", Icon = "@mipmap/ic_storage_white_48dp")]
     public class SubCategoryActivity : Activity
     {
         string category;
@@ -25,7 +23,7 @@ namespace VorratsUebersicht
             base.OnCreate(savedInstanceState);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 60, 60);
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);

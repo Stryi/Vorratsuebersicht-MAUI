@@ -45,7 +45,7 @@
         android:layout_above="@id/StorageItemList_Footer"        
         android:layout_alignParentRight="true"
         android:src="@mipmap/baseline_add_outline_black_36"
-        android:background="@mipmap/roundcorner"
+        android:background="@drawable/roundcorner"
         android:contentDescription="@string/StorageItemList_Menu_Add"
         android:layout_margin="16dp"/>
 

@@ -90,7 +90,7 @@ namespace VorratsUebersicht
 
             if (item.Image == null)
             {
-                image.SetImageResource(Resource.Drawable.ic_photo_camera_black_24dp);
+                image.SetImageResource(Resource.Mipmap.ic_photo_camera_black_24dp);
                 image.Alpha = 0.5f;
             }
             else

@@ -94,7 +94,7 @@ namespace VorratsUebersicht
 
             // Lagerbestand
             Button buttonLagerbestand = FindViewById<Button>(Resource.Id.MainButton_Lagerbestand);
-            //buttonLagerbestand.Click += delegate { StartActivityForResult (new Intent (this, typeof(StorageItemListActivity)), EditStorageItemQuantityId);};
+            buttonLagerbestand.Click += delegate { StartActivityForResult (new Intent (this, typeof(StorageItemListActivity)), EditStorageItemQuantityId);};
 
             // Artikeldaten
             Button buttonArticle = FindViewById<Button>(Resource.Id.MainButton_Artikeldaten);
@@ -265,12 +265,10 @@ namespace VorratsUebersicht
 
             string tag = view.Tag.ToString();
 
-            /* TODO
             var storageitemList = new Intent(this, typeof(StorageItemListActivity));
             storageitemList.PutExtra("OderByToConsumeDate", true);
             storageitemList.PutExtra("FilterExpiryDate", tag);
             StartActivity(storageitemList);
-            */
         }
 
         private void ShowCategoriesSelection()
@@ -764,11 +762,9 @@ private void ShowDatabaseInfoText()
                 switch(args.Which)
                 {
                     case 0: // Lagerbestand Liste
-                        /* TODO
                         var storageDetails = new Intent(this, typeof(StorageItemListActivity));
                         storageDetails.PutExtra("EANCode", eanCode);
                         this.StartActivityForResult(storageDetails, ContinueScanMode);
-                        */
                         break;
                     case 1:
                         // Artikel Liste
