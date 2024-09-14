@@ -108,10 +108,10 @@ namespace VorratsUebersicht
             Button buttonBarcode = FindViewById<Button>(Resource.Id.MainButton_Barcode);
             buttonBarcode.Click += ButtonBarcode_Click;
 
-            /* TODO
-
             // Einstellungen für Warnhinweis beim OpenFoodFacts.org
             ArticleDetailsActivity.showCostMessage = Settings.GetBoolean("ShowOpenFoodFactsInternetCostsMessage", true);
+
+            /* TODO
 
             StorageItemQuantityActivity.UseAltDatePicker = Settings.GetBoolean("UseAltDatePicker", false);
 
@@ -648,11 +648,9 @@ private void ShowDatabaseInfoText()
             if (result.Count == 0)
             {
                 // Neuanlage Artikel
-                /* TODO
                 var articleDetails = new Intent (this, typeof(ArticleDetailsActivity));
                 articleDetails.PutExtra("EANCode", eanCode);
                 StartActivityForResult(articleDetails, ContinueScanMode);
-                */
                 return;
             }
 
@@ -723,11 +721,9 @@ private void ShowDatabaseInfoText()
 
                         case 1:
                             // Artikelstamm bearbeiten
-                            /* TODO
                             var articleDetails = new Intent(this, typeof(ArticleDetailsActivity));
                             articleDetails.PutExtra("ArticleId", articleId);
                             StartActivityForResult(articleDetails, ContinueScanMode);
-                            */
                             break;
                         case 2:
                             // Auf die Einkaufsliste

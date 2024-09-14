@@ -179,11 +179,9 @@ namespace VorratsUebersicht
                         break;
 
                     case 6: // Artikelangaben...
-                        /*
                         var articleDetails = new Intent (this, typeof(ArticleDetailsActivity));
                         articleDetails.PutExtra("ArticleId", item.ArticleId);
                         this.StartActivityForResult(articleDetails, EditArticle);
-                        */
                         break;
 
                     case 7: // Als 'Gekauft' markieren

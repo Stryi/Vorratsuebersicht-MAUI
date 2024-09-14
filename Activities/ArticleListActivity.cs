@@ -359,7 +359,6 @@ namespace VorratsUebersicht
 
         private void ShowArticleDetails(int articleId, string name)
         {
-            /*
             var articleDetails = new Intent (this, typeof(ArticleDetailsActivity));
             articleDetails.PutExtra("Name", name);
             articleDetails.PutExtra("ArticleId", articleId);
@@ -371,7 +370,6 @@ namespace VorratsUebersicht
             StartActivityForResult(articleDetails, 10);
 
             this.SaveListState();
-            */
         }
 
         protected override void OnActivityResult(int requestCode, [GeneratedEnum] Result resultCode, Intent data)
