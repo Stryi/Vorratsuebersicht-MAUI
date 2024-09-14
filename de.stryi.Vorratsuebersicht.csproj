@@ -89,8 +89,6 @@
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Activities\BackupFileManageActivity.cs" />
-    <Compile Remove="Activities\InternetDatabaseSearchActivity.cs" />
     <Compile Remove="Activities\StorageItemQuantityActivity.cs" />
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
     <Compile Remove="Tools\DatePickerFragment .cs" />
@@ -157,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.82" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
   </ItemGroup>
   <ItemGroup>

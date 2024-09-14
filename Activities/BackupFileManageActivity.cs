@@ -9,7 +9,6 @@ using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Support.V4.Content;
 using Android.Views;
 using Android.Widget;
 
@@ -31,11 +30,11 @@ namespace VorratsUebersicht
             base.OnCreate(savedInstanceState);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 10, 10);
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
-            ActionBar.SetIcon(Resource.Drawable.baseline_folder_white_24);
+            ActionBar.SetIcon(Resource.Mipmap.baseline_folder_white_24);
 
             this.Title         = Intent.GetStringExtra("Text");
             this.path          = Intent.GetStringExtra("Path");
