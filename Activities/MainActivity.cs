@@ -111,9 +111,9 @@ namespace VorratsUebersicht
             // Einstellungen für Warnhinweis beim OpenFoodFacts.org
             ArticleDetailsActivity.showCostMessage = Settings.GetBoolean("ShowOpenFoodFactsInternetCostsMessage", true);
 
-            /* TODO
-
             StorageItemQuantityActivity.UseAltDatePicker = Settings.GetBoolean("UseAltDatePicker", false);
+
+            /* TODO
 
             ShoppingListActivity.oderBy                 = Settings.GetInt("ShoppingListOrder", 1);
             StorageItemListActivity.oderByToConsumeDate = Settings.GetBoolean("StorageItemListOrder", false);
@@ -708,13 +708,11 @@ private void ShowDatabaseInfoText()
                     switch(args.Which)
                     {
                         case 0: // Lagerbestand bearbeiten
-                            /* TODO
                             var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
                             storageDetails.PutExtra("ArticleId", articleId);
                             storageDetails.PutExtra("EditMode",  true);
 
                             this.StartActivityForResult(storageDetails, ContinueScanMode);
-                            */
                             break;
 
                         case 1:
@@ -732,14 +730,12 @@ private void ShowDatabaseInfoText()
                                 shoppingItemCount = 1;
 
                             // Aus Einkaufsliste ins Lager
-                            /* TODO
                             var storageDetails2 = new Intent(this, typeof(StorageItemQuantityActivity));
                             storageDetails2.PutExtra("ArticleId", articleId);
                             storageDetails2.PutExtra("EditMode",  true);
                             storageDetails2.PutExtra("Quantity",  (double)shoppingItemCount);
 
                             this.StartActivityForResult(storageDetails2, EditStorageQuantity);
-                            */
                             break;
                     }
 

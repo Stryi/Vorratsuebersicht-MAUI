@@ -11,18 +11,16 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
-using Android.Support.V4.Content;
-using Android.Support.V7.App;
 
 using static VorratsUebersicht.Tools;
 
 namespace VorratsUebersicht
 {
     using static VorratsUebersicht.StorageItemQuantityListViewAdapter;
-    using AlertDialog = Android.Support.V7.App.AlertDialog;
 
-    [Activity(Label = "@string/StorageItemQuantity", Theme = "@style/Theme.AppCompat", Icon = "@mipmap/ic_assignment_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]
-    public class StorageItemQuantityActivity : AppCompatActivity
+    //[Activity(Label = "@string/StorageItemQuantity", Theme = "@style/Theme.AppCompat", Icon = "@mipmap/ic_assignment_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(Label = "@string/StorageItemQuantity", Icon = "@mipmap/ic_assignment_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]
+    public class StorageItemQuantityActivity : Activity
     {
         public static readonly int ArticleDetailId = 1002;
 
@@ -48,10 +46,10 @@ namespace VorratsUebersicht
             SetContentView(Resource.Layout.StorageItemQuantity);
 
             // ActionBar Hintergrund Farbe setzen
-            var backgroundPaint = ContextCompat.GetDrawable(this, Resource.Color.Application_ActionBar_Background);
+            var backgroundPaint = this.GetDrawable(Resource.Color.Application_ActionBar_Background);
             backgroundPaint.SetBounds(0, 0, 10, 10);
-            this.SupportActionBar.SetBackgroundDrawable(backgroundPaint);
-            this.SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            this.ActionBar.SetBackgroundDrawable(backgroundPaint);
+            this.ActionBar.SetDisplayHomeAsUpEnabled(true);
 
             this.text             = Intent.GetStringExtra ("Heading") ?? string.Empty;
             this.articleId        = Intent.GetIntExtra    ("ArticleId", 0);
@@ -193,6 +191,7 @@ namespace VorratsUebersicht
                 listView.InvalidateViews();
                 if (!UseAltDatePicker)
                 {
+                    /*
                     DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime? time)
                         {
                             if (time.HasValue)
@@ -210,8 +209,10 @@ namespace VorratsUebersicht
                         }, DateTime.Today);
                     frag.ShowsDialog = true;
                     frag.Show(this.SupportFragmentManager, DatePickerFragment.TAG);
+                    */
                 } else
                 {
+                    /*
                     AltDatePickerFragment frag = AltDatePickerFragment.NewInstance(delegate (DateTime? time)
                     {
                         if (time.HasValue)
@@ -229,7 +230,7 @@ namespace VorratsUebersicht
                     }, DateTime.Today);
                     frag.ShowsDialog = true;
                     frag.Show(this.SupportFragmentManager, AltDatePickerFragment.TAG);
-
+                    */
                 }
             }
             else
@@ -462,7 +463,7 @@ namespace VorratsUebersicht
             {
                 headerView.Text = title;
                 detailView.Text = "Details zum " + title;
-                imageView.SetImageResource(Resource.Drawable.ic_add_a_photo_white_24dp);
+                imageView.SetImageResource(Resource.Mipmap.ic_add_a_photo_white_24dp);
 
                 return;
             }
@@ -498,7 +499,7 @@ namespace VorratsUebersicht
             {
                 TRACE(ex);
 
-                imageView.SetImageResource(Resource.Drawable.baseline_error_outline_black_24);
+                imageView.SetImageResource(Resource.Mipmap.baseline_error_outline_black_24);
                 headerView.Text = null;
                 detailView.Text = ex.Message + ex.StackTrace;
             }
@@ -522,13 +523,13 @@ namespace VorratsUebersicht
                 catch(Exception ex)
                 {
                     detailView.Text += "\r\n" + ex.Message;
-                    imageView.SetImageResource(Resource.Drawable.baseline_error_outline_black_24);
+                    imageView.SetImageResource(Resource.Mipmap.baseline_error_outline_black_24);
 
                 }
             }
             else
             {
-                imageView.SetImageResource(Resource.Drawable.ic_photo_camera_black_24dp);
+                imageView.SetImageResource(Resource.Mipmap.ic_photo_camera_black_24dp);
                 imageView.Alpha = 0.5f;
             }
         }
@@ -648,15 +649,19 @@ namespace VorratsUebersicht
 
             if (!UseAltDatePicker)
             {
+                /*
                 DatePickerFragment frag = DatePickerFragment.NewInstance(dateSelected, date);
                 frag.ShowsDialog = true;
                 frag.Show(this.SupportFragmentManager, DatePickerFragment.TAG);
+                */
             }
             else
             {
+                /*
                 AltDatePickerFragment frag = AltDatePickerFragment.NewInstance(dateSelected, date);
                 frag.ShowsDialog = true;
                 frag.Show(this.SupportFragmentManager, AltDatePickerFragment.TAG);
+                */
             }
         }
 

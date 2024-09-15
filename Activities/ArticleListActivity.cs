@@ -126,11 +126,11 @@ namespace VorratsUebersicht
             switch(item.ItemId)
             {
                 case 1: // Lagerbestand
-                    //var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
-                    //storageDetails.PutExtra("ArticleId", selectedItem.ArticleId);
+                    var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
+                    storageDetails.PutExtra("ArticleId", selectedItem.ArticleId);
 
-                    //this.SaveListState();
-                    //this.StartActivityForResult(storageDetails, 20);
+                    this.SaveListState();
+                    this.StartActivityForResult(storageDetails, 20);
 
                     return true;
 

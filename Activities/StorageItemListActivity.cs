@@ -318,14 +318,12 @@ namespace VorratsUebersicht
 
             StorageItemListView item = Tools.Cast<StorageItemListView>(itemObject);
 
-            /*
             StorageItemQuantityActivity.Reload();   // Artikel neu laden
 
             var storageItemQuantity = new Intent (this, typeof(StorageItemQuantityActivity));
             storageItemQuantity.PutExtra("Heading",   item.Heading);
             storageItemQuantity.PutExtra("ArticleId", item.ArticleId);
             this.StartActivityForResult(storageItemQuantity, StorageItemQuantityId);
-            */
 
             ListView listView = FindViewById<ListView>(Resource.Id.StorageItemView);
             this.listViewState = listView.OnSaveInstanceState();
@@ -386,7 +384,6 @@ namespace VorratsUebersicht
                     return;
 
                 // Anzeige Menge prü Artikel
-                /*
                 var storageItemQuantity = new Intent (this, typeof(StorageItemQuantityActivity));
                 storageItemQuantity.PutExtra("Heading",   heading);
                 storageItemQuantity.PutExtra("ArticleId", id);
@@ -395,7 +392,6 @@ namespace VorratsUebersicht
                 this.StartActivityForResult(storageItemQuantity, StorageItemQuantityId);
                 ListView listView = FindViewById<ListView>(Resource.Id.StorageItemView);
                 this.listViewState = listView?.OnSaveInstanceState();
-                */
             }
 
         }

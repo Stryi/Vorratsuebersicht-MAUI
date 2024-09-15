@@ -4,31 +4,31 @@
   <item android:id="@+id/StorageItemQuantity_Menu_Edit"
         android:icon="@mipmap/ic_mode_edit_white_24dp"
         android:title="@string/StorageItemQuantity_Menu_Edit"
-        app:showAsAction="always" />
+        android:showAsAction="always" />
 
   <item android:id="@+id/StorageItemQuantity_Menu_EditPicture"
         android:icon="@mipmap/ic_add_a_photo_white_24dp"
         android:title="@string/StorageItemQuantity_Menu_EditPicture"
-        app:showAsAction="never" />
+        android:showAsAction="never" />
   
   <item android:id="@+id/StorageItemQuantity_Cancel"
         android:icon="@mipmap/ic_close_white_24dp"
         android:title="@string/App_Cancel"
-        app:showAsAction="always" />
+        android:showAsAction="always" />
   
   <item android:id="@+id/StorageItemQuantity_Save"
         android:icon="@mipmap/ic_check_white_24dp"
         android:title="@string/App_Save"
-        app:showAsAction="always" />
+        android:showAsAction="always" />
 
   <item android:id="@+id/StorageItemQuantity_ToShoppingList"
         android:icon="@mipmap/baseline_shopping_cart_white_24"
         android:title="@string/StorageItemQuantity_Menu_ToShoppingList"
-        app:showAsAction="always" />
+        android:showAsAction="always" />
 
   <item android:id="@+id/StorageItemQuantity_ToArticleDetails"
         android:icon="@mipmap/ic_local_offer_white_48dp"
         android:title="@string/StorageItemQuantity_Menu_Artikelangaben"
-        app:showAsAction="never" />
+        android:showAsAction="never" />
 
 </menu>

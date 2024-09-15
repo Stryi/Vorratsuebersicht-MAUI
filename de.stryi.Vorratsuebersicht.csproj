@@ -85,15 +85,12 @@
     <AndroidResource Remove="Resources\drawable\web_hi_res_512.png" />
     <AndroidResource Remove="Resources\drawable\web_hi_res_512_old.png" />
     <AndroidResource Remove="Resources\layout\Main.axml" />
-    <AndroidResource Remove="Resources\Menu\StorageItemQuantity_menu.xml" />
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Activities\StorageItemQuantityActivity.cs" />
     <Compile Remove="Tools\AltDatePickerFragment.cs" />
     <Compile Remove="Tools\DatePickerFragment .cs" />
     <Compile Remove="Tools\ZXingFragmentActivity.cs" />
-    <Compile Remove="Views\StorageItemQuantityListViewAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Resources\drawable\baseline_add_box_24.xml" />

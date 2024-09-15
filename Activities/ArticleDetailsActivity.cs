@@ -640,12 +640,10 @@ namespace VorratsUebersicht
         {
             if (this.noStorageQuantity)
                 return;
-            /*
             var storageDetails = new Intent(this, typeof(StorageItemQuantityActivity));
             storageDetails.PutExtra("ArticleId", articleId);
             storageDetails.PutExtra("NoArticleDetails", true);
             this.StartActivityForResult(storageDetails, StorageQuantityId);
-            */
         }
 
         private void SearchEANCode(string eanCode)
