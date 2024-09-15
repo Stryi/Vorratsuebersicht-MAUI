@@ -9,7 +9,7 @@ using Android.Util;
 
 namespace VorratsUebersicht
 {
-    public class AltDatePickerFragment : Android.Support.V4.App.DialogFragment
+    public class AltDatePickerFragment : DialogFragment
     {
         private View view;
         private LinearLayout root;

@@ -191,7 +191,6 @@ namespace VorratsUebersicht
                 listView.InvalidateViews();
                 if (!UseAltDatePicker)
                 {
-                    /*
                     DatePickerFragment frag = DatePickerFragment.NewInstance(delegate (DateTime? time)
                         {
                             if (time.HasValue)
@@ -208,11 +207,9 @@ namespace VorratsUebersicht
 
                         }, DateTime.Today);
                     frag.ShowsDialog = true;
-                    frag.Show(this.SupportFragmentManager, DatePickerFragment.TAG);
-                    */
+                    frag.Show(this.FragmentManager, DatePickerFragment.TAG);
                 } else
                 {
-                    /*
                     AltDatePickerFragment frag = AltDatePickerFragment.NewInstance(delegate (DateTime? time)
                     {
                         if (time.HasValue)
@@ -229,8 +226,7 @@ namespace VorratsUebersicht
 
                     }, DateTime.Today);
                     frag.ShowsDialog = true;
-                    frag.Show(this.SupportFragmentManager, AltDatePickerFragment.TAG);
-                    */
+                    frag.Show(this.FragmentManager, AltDatePickerFragment.TAG);
                 }
             }
             else
@@ -649,19 +645,15 @@ namespace VorratsUebersicht
 
             if (!UseAltDatePicker)
             {
-                /*
                 DatePickerFragment frag = DatePickerFragment.NewInstance(dateSelected, date);
                 frag.ShowsDialog = true;
-                frag.Show(this.SupportFragmentManager, DatePickerFragment.TAG);
-                */
+                frag.Show(this.FragmentManager, DatePickerFragment.TAG);
             }
             else
             {
-                /*
                 AltDatePickerFragment frag = AltDatePickerFragment.NewInstance(dateSelected, date);
                 frag.ShowsDialog = true;
-                frag.Show(this.SupportFragmentManager, AltDatePickerFragment.TAG);
-                */
+                frag.Show(this.FragmentManager, AltDatePickerFragment.TAG);
             }
         }
 

@@ -113,8 +113,6 @@ namespace VorratsUebersicht
 
             StorageItemQuantityActivity.UseAltDatePicker = Settings.GetBoolean("UseAltDatePicker", false);
 
-            /* TODO
-
             ShoppingListActivity.oderBy                 = Settings.GetInt("ShoppingListOrder", 1);
             StorageItemListActivity.oderByToConsumeDate = Settings.GetBoolean("StorageItemListOrder", false);
 
@@ -132,14 +130,13 @@ namespace VorratsUebersicht
                 {
                     AltDatePickerFragment frag = AltDatePickerFragment.NewInstance(delegate (DateTime? time) { b.Text = time!=null ? time.Value.ToShortDateString() : "Kein Datum"; }, DateTime.Today);
                     frag.ShowsDialog = true;
-                    frag.Show(this.SupportFragmentManager, AltDatePickerFragment.TAG);
+                    frag.Show(this.FragmentManager, AltDatePickerFragment.TAG);
                 };
                 FindViewById<LinearLayout>(Resource.Id.Main_LinearLayout).AddView(b);
                 AltDatePickerFragment frag2 = AltDatePickerFragment.NewInstance(delegate (DateTime? time) { b.Text = time != null ? time.Value.ToShortDateString() : "Kein Datum"; }, DateTime.Today);
                 frag2.ShowsDialog = true;
-                frag2.Show(this.SupportFragmentManager, AltDatePickerFragment.TAG);
+                frag2.Show(this.FragmentManager, AltDatePickerFragment.TAG);
             }
-            */
 
             if (MainActivity.IsGooglePlayPreLaunchTestMode)
             {

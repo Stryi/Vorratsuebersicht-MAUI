@@ -88,8 +88,6 @@
     <AndroidResource Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Remove="Tools\AltDatePickerFragment.cs" />
-    <Compile Remove="Tools\DatePickerFragment .cs" />
     <Compile Remove="Tools\ZXingFragmentActivity.cs" />
   </ItemGroup>
   <ItemGroup>
