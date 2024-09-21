@@ -6,3 +6,4 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Style", "IDE0018:Inline variable declaration", Justification = "<Pending>", Scope = "member", Target = "~M:VorratsUebersicht.MainActivity.OnCreate(Android.OS.Bundle)")]
+[assembly: SuppressMessage("Interoperability", "CA1422:Validate platform compatibility", Justification = "<Pending>", Scope = "member", Target = "~M:VorratsUebersicht.MainActivity.OnCreate(Android.OS.Bundle)")]
