@@ -158,10 +158,10 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Maui">
-      <HintPath>bin\Microsoft.Maui.dll</HintPath>
+      <HintPath>Binaries\Microsoft.Maui.dll</HintPath>
     </Reference>
     <Reference Include="ZXing.Net.MAUI.Controls">
-      <HintPath>bin\ZXing.Net.MAUI.Controls.dll</HintPath>
+      <HintPath>Binaries\ZXing.Net.MAUI.Controls.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
