@@ -12,6 +12,7 @@ namespace VorratsUebersicht
 {
     using SQLite;
     using static Tools;
+    using Application = Android.App.Application;
 
     public class Android_Database
     {

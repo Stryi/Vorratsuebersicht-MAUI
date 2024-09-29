@@ -7,6 +7,16 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 
+using ImageButton = Android.Widget.ImageButton;
+using ListView = Android.Widget.ListView;
+using RadioButton = Android.Widget.RadioButton;
+using WebView = Android.Webkit.WebView;
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 namespace VorratsUebersicht
 {
     [Activity(Label = "@string/Main_Button_BestandNachKategorie", Icon = "@mipmap/ic_storage_white_48dp")]

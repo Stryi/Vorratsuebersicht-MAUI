@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 using Android.App;
 using static Android.Media.Audiofx.DynamicsProcessing;
+using Application = Android.App.Application;
 
 namespace VorratsUebersicht
 {

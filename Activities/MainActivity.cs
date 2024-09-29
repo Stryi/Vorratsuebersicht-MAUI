@@ -7,7 +7,15 @@ using System.Collections.ObjectModel;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
+using Android.App;
+using Android.Widget;
 
+using WebView = Android.Webkit.WebView;
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
 
 namespace VorratsUebersicht
 {
@@ -30,7 +38,7 @@ namespace VorratsUebersicht
 
         private static DateTime preLaunchTestEndDay;
 
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Android.OS.Bundle bundle)
         {
             // Damit Pre-Launch von Google Play Store nicht immer wieder
             // in die EAN Scan "Falle" tappt und da nicht wieder rauskommt.
@@ -89,7 +97,7 @@ namespace VorratsUebersicht
             FindViewById<TextView>(Resource.Id.Main_Text2).Click += ArticlesNearExpiryDate_Click;
 
             // Auswahl nach Kategorien
-            Button buttonKategorie = FindViewById<Button>(Resource.Id.MainButton_Kategorie);
+            Button buttonKategorie = FindViewById<Android.Widget.Button>(Resource.Id.MainButton_Kategorie);
             buttonKategorie.Click += delegate { this.ShowCategoriesSelection();};
 
             // Lagerbestand

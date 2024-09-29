@@ -7,6 +7,7 @@ using Android.Content.Res;
 namespace VorratsUebersicht
 {
     using static Tools;
+    using Color = Android.Graphics.Color;
 
     public class StorageItemListView : ListItemViewBase
     {

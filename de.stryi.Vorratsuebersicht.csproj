@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-android</TargetFramework>
+    <TargetFramework>net8.0-android33.0</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <OutputType>Exe</OutputType>
     <Nullable>enable</Nullable>
@@ -149,9 +149,20 @@
     <None Remove="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.82" />
     <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.82" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="sqlite-net-pcl" Version="1.9.172" />
+    <PackageReference Include="ZXing.Net.Maui" Version="0.4.0" />
+    <PackageReference Include="ZXing.Net.Maui.Controls" Version="0.4.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Maui">
+      <HintPath>bin\Microsoft.Maui.dll</HintPath>
+    </Reference>
+    <Reference Include="ZXing.Net.MAUI.Controls">
+      <HintPath>bin\ZXing.Net.MAUI.Controls.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Update="Assets\Vorraete_db0.db3">

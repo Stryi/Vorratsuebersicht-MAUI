@@ -8,6 +8,16 @@ using Android.Views;
 using Android.Widget;
 using static Android.Widget.AdapterView;
 
+using ImageButton = Android.Widget.ImageButton;
+using ListView = Android.Widget.ListView;
+using RadioButton = Android.Widget.RadioButton;
+using WebView = Android.Webkit.WebView;
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 namespace VorratsUebersicht
 {
     [Activity(Label = "@string/Main_Button_ArtikelListe", Icon = "@mipmap/ic_local_offer_white_48dp")]

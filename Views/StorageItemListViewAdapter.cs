@@ -5,6 +5,7 @@ using Android.App;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
+using View = Android.Views.View;
 
 namespace VorratsUebersicht
 {

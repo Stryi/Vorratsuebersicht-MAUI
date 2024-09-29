@@ -5,6 +5,9 @@ using Android.App;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using ImageButton = Android.Widget.ImageButton;
+using View = Android.Views.View;
+using Color = Android.Graphics.Color;
 
 
 namespace VorratsUebersicht

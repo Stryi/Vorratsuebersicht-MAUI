@@ -5,6 +5,8 @@ using Android.App;
 using Android.Content;
 using Android.Views;
 using Android.Widget;
+using CheckBox = Android.Widget.CheckBox;
+using View = Android.Views.View;
 
 namespace VorratsUebersicht
 {

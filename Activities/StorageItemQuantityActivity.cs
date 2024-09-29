@@ -12,11 +12,24 @@ using Android.Views;
 using Android.Widget;
 using Android.Graphics;
 
+using ImageButton = Android.Widget.ImageButton;
+using ListView = Android.Widget.ListView;
+using RadioButton = Android.Widget.RadioButton;
+using WebView = Android.Webkit.WebView;
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 using static VorratsUebersicht.Tools;
 
 namespace VorratsUebersicht
 {
     using static VorratsUebersicht.StorageItemQuantityListViewAdapter;
+    using Button = Android.Widget.Button;
+    using ImageButton = Android.Widget.ImageButton;
+    using ListView = Android.Widget.ListView;
 
     //[Activity(Label = "@string/StorageItemQuantity", Theme = "@style/Theme.AppCompat", Icon = "@mipmap/ic_assignment_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]
     [Activity(Label = "@string/StorageItemQuantity", Icon = "@mipmap/ic_assignment_white_48dp", ScreenOrientation = ScreenOrientation.Portrait)]

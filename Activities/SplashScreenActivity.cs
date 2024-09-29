@@ -12,6 +12,16 @@ using Android.Widget;
 using Android.Content;
 using Android.Content.PM;
 
+using ImageButton = Android.Widget.ImageButton;
+using ListView = Android.Widget.ListView;
+using RadioButton = Android.Widget.RadioButton;
+using WebView = Android.Webkit.WebView;
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 // Anhand von
 // http://www.c-sharpcorner.com/UploadFile/1e050f/creating-splash-screen-for-android-app-in-xamarin/
 // 

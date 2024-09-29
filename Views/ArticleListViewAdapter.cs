@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Graphics;
+using View = Android.Views.View;
 
 namespace VorratsUebersicht
 {

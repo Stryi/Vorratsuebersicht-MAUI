@@ -5,6 +5,7 @@ using System.Text;
 
 using Android.App;
 using Android.Content;
+using AndroidX.Core.Content;
 using Microsoft.Maui.Storage;
 
 namespace VorratsUebersicht

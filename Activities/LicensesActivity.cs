@@ -5,6 +5,13 @@ using Android.OS;
 using Android.Webkit;
 using Android.Views;
 
+using WebView = Android.Webkit.WebView;
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 namespace VorratsUebersicht
 {
     [Activity(Label = "Open-Source-Lizenzen")]
@@ -22,7 +29,7 @@ namespace VorratsUebersicht
             ActionBar.SetBackgroundDrawable(backgroundPaint);
             ActionBar.SetDisplayHomeAsUpEnabled(true);
 
-            WebView textView = FindViewById<WebView>(Resource.Id.Licenses_Text);
+            var textView = FindViewById<WebView>(Resource.Id.Licenses_Text);
             textView.LoadUrl("file:///android_asset/Licenses.html");
         }
 

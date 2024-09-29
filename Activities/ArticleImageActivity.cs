@@ -12,6 +12,12 @@ using MatrixGuide;
 
 using static VorratsUebersicht.Tools;
 
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 namespace VorratsUebersicht
 {
     [Activity(Label = "ArticleImageActivity")]

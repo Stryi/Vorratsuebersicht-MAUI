@@ -6,6 +6,10 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using Android.Util;
+using View = Android.Views.View;
+using Button = Android.Widget.Button;
+
+
 
 namespace VorratsUebersicht
 {

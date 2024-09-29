@@ -12,6 +12,12 @@ using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
 
+using Button = Android.Widget.Button;
+using Color = Android.Graphics.Color;
+using ProgressBar = Android.Widget.ProgressBar;
+using Switch = Android.Widget.Switch;
+using View = Android.Views.View;
+
 using Newtonsoft.Json;
 
 namespace VorratsUebersicht

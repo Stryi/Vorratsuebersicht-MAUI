@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Android.App;
 using Android.Views;
 using Android.Widget;
+using View = Android.Views.View;
 
 namespace VorratsUebersicht
 {
